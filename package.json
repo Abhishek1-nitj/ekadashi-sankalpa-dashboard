@@ -1,0 +1,8 @@
+{
+  "name": "es-mockup",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "start": "python3 -m http.server 8000"
+  }
+}
