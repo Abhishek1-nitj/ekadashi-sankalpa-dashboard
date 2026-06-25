@@ -15,22 +15,18 @@
 *{box-sizing:border-box}
 html,body{margin:0;background:radial-gradient(circle at top,#1e2a52 0,#0b1020 54%);color:var(--text);font-family:"IBM Plex Sans",system-ui,sans-serif}
 body{min-height:100vh}
-.bg{position:fixed;inset:0;background:
-  linear-gradient(135deg,rgba(245,158,11,.12),transparent 35%),
-  linear-gradient(315deg,rgba(16,185,129,.08),transparent 38%);
-  pointer-events:none}
+.bg{position:fixed;inset:0;background:linear-gradient(135deg,rgba(245,158,11,.12),transparent 35%),linear-gradient(315deg,rgba(16,185,129,.08),transparent 38%);pointer-events:none}
 .shell{position:relative;max-width:1600px;margin:0 auto;padding:28px}
 .hero{display:flex;justify-content:space-between;gap:16px;align-items:end;padding:20px 0 8px}
 .eyebrow{margin:0 0 8px;color:var(--accent);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:700}
 h1{margin:0;font:700 clamp(30px,4vw,54px)/1.02 "Space Grotesk",sans-serif}
-.lede{margin:10px 0 0;color:var(--muted);max-width:760px}
 .hero-actions{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
 .stat,.card,.panel,.dialog{background:rgba(17,24,45,.88);backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.22)}
 .stat{padding:12px 14px;border-radius:14px;color:var(--muted)}
-.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:16px 0}
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:16px 0}
 .card{padding:16px;border-radius:18px}
 .card span{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
-.card strong{display:block;margin-top:8px;font:700 28px "Space Grotesk",sans-serif}
+.card strong{display:block;margin-top:8px;font:700 28px "Space Grotesk",sans-serif;font-variant-numeric:tabular-nums}
 .panel{border-radius:20px;overflow:hidden}
 input,select,button{font:500 14px "IBM Plex Sans",sans-serif}
 input,select{width:100%;background:#0c1326;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:11px 12px;outline:none}
@@ -38,13 +34,13 @@ input::placeholder{color:#64748b}
 button{border:0;border-radius:12px;padding:11px 14px;background:var(--accent);color:#111827;font-weight:700;cursor:pointer}
 .btn{background:#223155;color:var(--text);border:1px solid var(--line)}
 .btn-ghost{background:transparent}
-.table-bar{display:flex;justify-content:flex-end;margin:14px 0 0}
+.table-bar{display:flex;gap:12px;align-items:center;justify-content:space-between;margin:14px 0 0}
+.master-search{flex:1;min-width:0;max-width:900px}
 .table-wrap{margin-top:14px;max-height:calc(100vh - 180px);overflow:auto}
-table{width:100%;border-collapse:collapse;table-layout:fixed;min-width:1980px}
-thead th{background:#0d1428;color:#cbd5e1;text-align:left;padding:14px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--line);z-index:3}
+table{width:100%;border-collapse:collapse;table-layout:fixed;min-width:2520px}
+thead th{background:#0d1428;color:#cbd5e1;text-align:left;padding:14px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--line);z-index:3;position:relative;white-space:normal;vertical-align:top}
 thead tr:first-child th{position:sticky;top:0;z-index:10}
 thead tr:first-child th::after{content:"";position:absolute;inset:auto 0 -1px 0;height:1px;background:var(--line)}
-thead th{position:relative;white-space:normal;vertical-align:top}
 thead .th-wrap{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;min-height:34px}
 thead .th-label{display:block;line-height:1.15;word-break:break-word;overflow-wrap:anywhere}
 thead .filter-btn{flex:0 0 auto;margin-top:1px}
@@ -52,6 +48,7 @@ tbody td{padding:12px;border-bottom:1px solid rgba(255,255,255,.05);vertical-ali
 tbody tr:hover{background:rgba(255,255,255,.03)}
 .row-bad{background:rgba(239,68,68,.08)}
 .row-good{background:rgba(16,185,129,.06)}
+.row-discontinued{background:rgba(245,158,11,.08)}
 .num{font-variant-numeric:tabular-nums}
 .neg{color:#fda4af}.pos{color:#86efac}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:var(--chip);font-size:12px;white-space:nowrap}
@@ -69,7 +66,7 @@ tbody tr:hover{background:rgba(255,255,255,.03)}
 .kv div{word-break:break-word}
 .section{margin-top:16px}
 .section h3{margin:0 0 10px;font:700 16px "Space Grotesk"}
-.tx-table{width:100%;min-width:980px;border-collapse:collapse}
+.tx-table{width:100%;min-width:1100px;border-collapse:collapse}
 .tx-table th,.tx-table td{padding:10px;border-bottom:1px solid rgba(255,255,255,.06);text-align:left}
 .modal-actions{display:flex;gap:8px;align-items:center}
 .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -94,6 +91,7 @@ thead tr:first-child th.sticky-name{z-index:50 !important;background:#0d1428}
 tbody .row-bad .sticky-name{background:#2a1d33}
 tbody .row-good .sticky-name{background:#132338}
 tbody .sticky-name{box-shadow:10px 0 18px rgba(0,0,0,.18)}
+.no-results{padding:22px;color:var(--muted);text-align:center}
 @media (max-width:1200px){
   .hero{flex-direction:column;align-items:start}
   .hero-actions{align-items:start}

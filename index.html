@@ -21,7 +21,10 @@
       </div>
     </header>
 
+    <section class="stats" id="stats"></section>
+
     <div class="table-bar">
+      <input id="masterSearch" class="master-search" placeholder="Search donors, phones, emails, pledge values, center, sevaka, status, payment type..." />
       <button id="clearAllFilters" class="btn">Clear All Filters</button>
     </div>
 
@@ -34,9 +37,13 @@
           <col style="width:150px">
           <col style="width:130px">
           <col style="width:170px">
+          <col style="width:130px">
+          <col style="width:180px">
           <col style="width:190px">
           <col style="width:180px">
           <col style="width:130px">
+          <col style="width:180px">
+          <col style="width:150px">
           <col style="width:180px">
           <col style="width:130px">
           <col style="width:120px">
@@ -51,10 +58,14 @@
             <th><span class="th-wrap"><span class="th-label">Date of Registration</span><button class="filter-btn" data-filter-key="registrationDate">▾</button></span></th>
             <th><span class="th-wrap"><span class="th-label">Pledge Value</span><button class="filter-btn" data-filter-key="pledgeValue">▾</button></span></th>
             <th><span class="th-wrap"><span class="th-label">Number of Ekadashis Passed</span><button class="filter-btn" data-filter-key="passed">▾</button></span></th>
+            <th><span class="th-wrap"><span class="th-label">Ekadashis Promised</span><button class="filter-btn" data-filter-key="promised">▾</button></span></th>
+            <th><span class="th-wrap"><span class="th-label">Total Pledge Commitment</span><button class="filter-btn" data-filter-key="commitment">▾</button></span></th>
             <th><span class="th-wrap"><span class="th-label">Pledged Amount Till Today</span><button class="filter-btn" data-filter-key="pledged">▾</button></span></th>
             <th><span class="th-wrap"><span class="th-label">Amount Paid Till Today</span><button class="filter-btn" data-filter-key="paid">▾</button></span></th>
             <th><span class="th-wrap"><span class="th-label">Default Status</span><button class="filter-btn" data-filter-key="defaultStatus">▾</button></span></th>
             <th><span class="th-wrap"><span class="th-label">Default / Excess Amount</span><button class="filter-btn" data-filter-key="delta">▾</button></span></th>
+            <th><span class="th-wrap"><span class="th-label">Donor Status</span><button class="filter-btn" data-filter-key="donorStatus">▾</button></span></th>
+            <th><span class="th-wrap"><span class="th-label">Current Payment Status</span><button class="filter-btn" data-filter-key="paymentStatus">▾</button></span></th>
             <th><span class="th-wrap"><span class="th-label">Donor Mapped</span><button class="filter-btn" data-filter-key="mapped">▾</button></span></th>
             <th><span class="th-wrap"><span class="th-label">Other Details</span></span></th>
             <th><span class="th-wrap"><span class="th-label">Payment Details</span></span></th>
